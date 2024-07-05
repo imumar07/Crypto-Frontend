@@ -113,7 +113,7 @@ async function onPageLoad() {
    
   button.textContent = `Buy ${stock.value.toUpperCase()}`;
   const data = await fetch(
-    `https://umar-crypto-backend.vercel.app/${stock.value.toUpperCase()}-INR`,
+    `https://crypto-backend-zeta.vercel.app/${stock.value.toUpperCase()}-INR`,
     { method: "GET", headers: { "Content-Type": "application/json" } }
   );
   const response = await data.json();
@@ -132,7 +132,7 @@ stock.addEventListener("change", async () => {
   averageText.textContent = `Average ${stock.value.toUpperCase()}/${currency.value.toUpperCase()} net price including commission`;
 
   const data = await fetch(
-    `https://umar-crypto-backend.vercel.app/${stock.value.toUpperCase()}-INR`,
+    `https://crypto-backend-zeta.vercel.app/${stock.value.toUpperCase()}-INR`,
     { method: "GET", headers: { "Content-Type": "application/json" } }
   );
   const response = await data.json();
