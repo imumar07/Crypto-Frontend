@@ -1,0 +1,146 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  background-color: #191d28;
+  width: 100%;
+  margin: 0;
+}
+
+.body {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 80px;
+  height: 40px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  background: #6ccacb;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: #2e3241;
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 80px;
+}
+.main-logo {
+  height: 3rem;
+  width: fit-content;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+#middleHeaderContainer select,
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0.7rem;
+  font-size: 1rem;
+  background-color: #2e3241;
+  color: #fff;
+  border-radius: 1rem;
+  font-weight: 500;
+}
+#middleHeaderContainer select option {
+  font-size: 0.7rem;
+}
+.connect-telegram {
+  background-color: #6ccacb;
+  color: #fff;
+  padding: 7px;
+  border-radius: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-height: 40px;
+}
+.connect-telegram img {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 1rem;
+}
+
+#lastHeaderContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#lastHeaderContainer > * {
+  margin-right: 0.5rem;
+}
+
+.color-green {
+  color: #5dc7c2;
+}
+
+@media only screen and (orientation: portrait) {
+  .header {
+    flex-direction: column;
+  }
+
+  .header > * {
+    margin-top: 0.4rem;
+    margin-bottom: 1rem;
+  }
+  .main-heading {
+    font-size: 3rem;
+    margin: 1rem;
+  }
+}
+
+.average-header {
+  padding: 10px 0;
+}
